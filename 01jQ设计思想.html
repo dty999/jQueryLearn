@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="./jquery-1.10.1.min.js"></script>
 
 </head>
+
 <body>
     <ul>
         <li>12223345</li>
@@ -16,8 +18,20 @@
     </ul>
 </body>
 <script>
-    window.onload = function(){
-        $('li').css('font-size','30px')
+    window.onload = function () {
+        //1.css形式选择元素
+        $('li').css('font-size', '30px')
     }
+    $(function () {
+        $('li:nth-child(2)').click(() => {
+            alert('xxx')
+        }).css('background', 'red').mouseover(function () {
+            $(this).css('font-size', '40px')
+        }).mouseout(function () {
+            $(this).css('font-size', '30px')
+        })
+    })
+
 </script>
+
 </html>
