@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <h3>1</h3>
+    <h3 class="middle">2</h3>
+    <h3>3</h3>
+</body>
+<script>
+    $(function (param) {  
+        $('.middle').next().css('color','red')
+    })
+    $(function (param) {  
+        $('.middle').prev().css('color','green')
+    })
+</script>
+</html>
