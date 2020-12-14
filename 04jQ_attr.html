@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <div id="div1" title="hello" class="box"></div>
+</body>
+<script>
+    const log = console.log
+    $(function(){
+        log($('div').attr('title'))//获取属性
+        $('div').attr('id','nihao')//设置属性
+        $('div').attr({
+            title:'xxx',
+            class:'container'
+        })
+    })
+</script>
+</html>
