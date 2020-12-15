@@ -7,19 +7,22 @@
     <title>Document</title>
     <script src="./jquery-1.10.1.min.js"></script>
     <style>
-        #div1{
+        #div1 {
             margin: 0 auto;
             width: 600px;
             height: 800px;
             border: 1px solid green;
         }
-        #div1 div{
+
+        #div1 div {
             display: none;
         }
-        #div1 div.htmlTab{
+
+        #div1 div.htmlTab {
             display: block;
         }
-        .active{
+
+        .active {
             color: red;
         }
     </style>
@@ -33,29 +36,27 @@
         <div class="jsTab">js一般指javascript。</div>
     </div>
 </body>
-    <script>
-        const buttons = [...document.querySelectorAll('button')]
-        const divTabs = [...document.querySelectorAll('div div')]
-        // console.table(divTabs)
-        function select(e) {
-            for(button of buttons){
-                button.style.color = 'black'
+<script>
+    const buttons = [...document.querySelectorAll('button')]
+    const divTabs = [...document.querySelectorAll('div div')]
+    // console.table(divTabs)
+    function select(e) {
+        for (button of buttons) {
+            button.style.color = 'black'
 
-            }
-            for(divTab of divTabs){
-                divTab.style.display = 'none'
-            }
-
-
-            let index = buttons.findIndex(button=>button === this)
-
-            this.style.color = 'red'
-            
-            // console.log(divTabs[index])
-            divTabs[index].style.display = 'block'
         }
-        for(button of buttons){
-            button.addEventListener('click',select)
+        for (divTab of divTabs) {
+            divTab.style.display = 'none'
         }
-    </script>
+
+        let index = buttons.findIndex(button => button === this)
+
+        this.style.color = 'red'
+        divTabs[index].style.display = 'block'
+    }
+    for (button of buttons) {
+        button.addEventListener('click', select)
+    }
+</script>
+
 </html>
