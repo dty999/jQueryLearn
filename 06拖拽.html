@@ -13,6 +13,21 @@
     <div id="div1"></div>
 </body>
 <script>
-    
+    $(function () {
+        $('div').mousedown(function (e) {  
+            var offsetX = e.pageX - $(this).offset().left
+            var offsetY = e.pageY - $(this).offset().top
+            var that = this
+            $(document).mousemove(function (e) {  
+                $(that).css({
+                    left:e.pageX - offsetX,
+                    top:e.pageY - offsetY
+                })
+            })
+        })
+        $(document).mouseup(function () {  
+            $(document).off('mousemove')
+        })
+    })
 </script>
 </html>
