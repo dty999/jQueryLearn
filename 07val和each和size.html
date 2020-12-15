@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-1.10.1.min.js"></script>
+</head>
+<body>
+    <input type="text" value="">
+    <input type="text" value="">
+    <input type="text" value="">
+</body>
+<script>
+    // val()获取/设置表单元素的值
+    $('input').each(function (index,item) {  
+        $(item).val(index)
+    })
+    console.log($('input').val())//获取的时候只能获取第一个
+    console.log($('input').size())
+</script>
+</html>
