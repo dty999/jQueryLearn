@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #div1 {
+            background-color: blanchedalmond;
+        }
+
+        #div2 {
+            background-color: chartreuse;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div id='div1'></div>
+    <div id='div2'></div>
 </body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $(function () {
+        $('#div1').hover(function () {
+            $('#div2').animate({
+                width: 300,
+                height: 300
+            }, 300, function () {
+                console.log('回调:移入')
+            })
+        },function () {  
+            $('#div2').animate({
+                width: 200,
+                height: 200
+            }, 300, function () {
+                console.log('回调:移出')
+            })
+        })
+    })
+</script>
+
 </html>
