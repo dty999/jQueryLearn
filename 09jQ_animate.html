@@ -28,20 +28,18 @@
 <script src="./jquery-1.10.1.min.js"></script>
 <script>
     $(function () {
-        $('#div1').hover(function () {
+        $('#div1').click(function () {
             $('#div2').animate({
                 width: 300,
                 height: 300
-            }, 300, function () {
-                console.log('回调:移入')
+            }, 3000,function (param) {  
+                console.log('回调函数')
             })
-        },function () {  
-            $('#div2').animate({
-                width: 200,
-                height: 200
-            }, 300, function () {
-                console.log('回调:移出')
-            })
+
+            $('#div1').animate({
+                width:300,
+                height:300
+            },3000)
         })
     })
 </script>
