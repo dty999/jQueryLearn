@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+
+        #div2 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <button id="btn">移除</button>
+    <div id="div1"></div>
+    <div id="div2"></div>
 </body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $(function () {
+        $('#btn').click(
+            function () {
+                // let div11 = $('#div1').remove()
+                let div11 = $('#div1').detach()//移除之后会保留添加的事件
+                div11.appendTo($('#div2'))
+            }
+        )
+        $('#div1').click(function(){
+            alert('xxx')
+        })
+
+    })
+</script>
+
 </html>
