@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $(()=>{console.log('ready2')})
+
+    $(document).ready(function(){console.log('ready1')})
+    //上面两个等价
+    window.onload = ()=>console.log('windowOnload')
+</script>
+</html>
