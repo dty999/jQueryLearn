@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">克隆节点</button>
+    <div class="box" id="div1">节点一</div>
+    <div>节点二</div>
+</body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $('#btn').click(()=>{
+        const div1 = $('#div1').clone()//clone(true)会克隆行为
+        div1.appendTo('#div1')
+    })
+</script>
+</html>
