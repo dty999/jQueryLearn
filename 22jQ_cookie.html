@@ -7,6 +7,16 @@
 </head>
 <body>
     <script src="./jquery-1.10.1.min.js"></script>
-    
+    <script src="./jquery.cookie.js"></script>
+    <script>
+        $.cookie('葫芦娃','火娃',{
+            expires:7,
+            // raw:true
+        })
+        alert($.cookie('葫芦娃'))
+        $.cookie('葫芦娃',null,{
+            expires:0
+        })
+    </script>
 </body>
 </html>
