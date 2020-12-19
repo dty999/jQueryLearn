@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./jquery-1.10.1.min.js"></script>
+    <script>
+
+        $(() => {
+            // $('#btn').click(() => {
+            //     $.ajax({
+            //         type: 'get',
+            //         url: '1.txt',
+            //         data: {
+
+            //         },
+            //         success: function (data, statusText, xhr) {
+            //             alert(data + '11' + statusText)
+            //         },
+            //         err: function (mg) {
+            //             alert(msg)
+            //         }
+            //     })
+            //     console.log('qqq')
+            // })
+            $('#btn').click(() => {
+                $.ajax({
+                    type: 'get',
+                    url: 'https://query.asilu.com/weather/baidu',
+                    data: {
+                        city: '濮阳'
+                    },
+                    dataType: 'jsonp',
+                    success: (data) => {
+                        console.log(data)
+
+                    },
+                    error: (msg) => {
+
+                    }
+                })
+            })
+        })
+    </script>
+    <button id="btn">下载数据</button>
+</body>
+
+</html>
