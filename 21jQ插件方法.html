@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>123</div>
+</body>
+<script src="./jquery-1.10.1.min.js"></script>
+<!-- 给jQ新增函数 -->
+<script>
+
+    $.extend({
+        aaa:()=>{
+            console.log('这是一个工具方法')
+        }
+    })
+    $.fn.extend({
+        aaa:()=>{
+            console.log('这是一个jQ对象方法')
+        },
+        drag:function(){
+            console.log(this)//this是jq对象
+            //拖拽逻辑
+
+            //返回this支持jq链式操作
+            return this
+        }
+    })
+    $(()=>{
+        $.aaa()
+        $().aaa()
+        $('div').drag().css('color','red')
+    })
+</script>
+</html>
