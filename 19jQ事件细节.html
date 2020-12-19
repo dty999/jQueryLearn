@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">button</button>
+</body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $(()=>{
+        // $('#btn').click((e)=>{
+        //     console.log(e.type)
+        //     console.log(e.target)
+
+        // })
+        $('#btn').on('click',{name:'葫芦娃',age:12},(e)=>{
+            console.log(e.data)
+        })
+        $('#btn').on('click',alert('1111'))
+        $('#btn').trigger()//主动触发事件
+        
+    })
+</script>
+</html>

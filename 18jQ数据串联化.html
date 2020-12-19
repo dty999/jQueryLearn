@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name='a' value='1'>
+    <input type="text" name='b' value='2'>
+    <input type="text" name='c' value='3'>
+</body>
+<script src="./jquery-1.10.1.min.js"></script>
+<script>
+    $(()=>{
+        let 查询字符串 = $('input').serialize()
+        console.log(查询字符串)
+        let 数组 = $('input').serializeArray()
+        console.log(数组)
+    })
+</script>
+</html>
